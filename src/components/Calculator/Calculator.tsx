@@ -48,8 +48,6 @@ const Calculator = () => {
         setIsPressefalse(true)
     }
 
-    console.log('prices', carPriceValue, initialFeeValue, leaseTermValue)
-
     return <div className='calculatorPage'>
         <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
         <form>

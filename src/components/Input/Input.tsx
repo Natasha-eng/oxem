@@ -23,7 +23,11 @@ const Input = ({ label, htmlFor, id, name, value, unit, percent, styles, initial
     const [isActive, setIsActive] = useState(false)
 
     const onInputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        if (isNaN(Number(e.target.value))) {
+        if (minCostBorder && (isNaN(Number(e.target.value)) || Number(e.target.value) > 6000000)) {
+            return
+        }
+
+        if (minFeeBorder && (isNaN(Number(e.target.value)) || Number(e.target.value) > 60)) {
             return
         }
         setIsActive(true)
