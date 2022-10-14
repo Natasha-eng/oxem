@@ -1,0 +1,108 @@
+@import "./../../../common/variables/variables.scss";
+
+.inputsWrapper {
+  .inputHeader {
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  input[type="text"] {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 20px;
+    background-color: $inputBackgroundColor;
+    padding: 20px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    color: $mobileInputTextColor;
+    width: 100%;
+    margin-top: 8px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 24px;
+      font-size: 30px;
+      line-height: 36px;
+      color: $inputTextColor;
+      padding: 16px 24px;
+    }
+
+    &.activeField {
+      border: 2px solid #f3f3f4;
+      background-color: white;
+      padding: 14px 22px;
+    }
+  }
+
+  .unit {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 20px;
+    color: $mobileInputTextColor;
+    position: absolute;
+    right: 20px;
+    top: 55%;
+
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+      line-height: 36px;
+      color: $inputTextColor;
+    }
+  }
+
+  .percentField {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 20px;
+    color: $mobileInputTextColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f4;
+    border-radius: 16px;
+    padding: 8px 8px 6px 20px;
+    margin-top: 8px;
+
+    .percentInput {
+      width: 70px;
+      height: 48px;
+      background: #e0e0e0;
+      border-radius: 12px;
+      margin-top: 0;
+      padding: 0;
+      text-align: center;
+
+      @media screen and (min-width: 768px) {
+        height: 54px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      // @media screen and (min-width: 1120px) {
+      //   padding: 15px 17px;
+      // }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: 24px;
+      font-size: 30px;
+      line-height: 36px;
+      color: $inputTextColor;
+      padding: 9px 9px 7px 24px;
+    }
+  }
+}

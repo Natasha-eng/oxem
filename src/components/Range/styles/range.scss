@@ -1,0 +1,75 @@
+@import "./../../../common/variables/variables.scss";
+
+.inputsWrapper {
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 93%;
+    height: 2px;
+    border-radius: 5px;
+    background: $sliderBackgroundColor;
+    background-image: linear-gradient($sliderColor, $sliderColor);
+    background-repeat: no-repeat;
+    outline: none;
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-51%, 0);
+    z-index: 0;
+
+    &:hover {
+      height: 1px;
+    }
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    z-index: 2;
+    position: relative;
+    top: 2px;
+    margin-top: -5px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $sliderColor;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    z-index: 2;
+    position: relative;
+    top: 2px;
+    margin-top: -5px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $sliderColor;
+    cursor: pointer;
+  }
+
+  // input[type="range"]::-moz-range-progress {
+  //   background: $sliderColor;
+  //   border-radius: 5px;
+  //   height: 2px;
+  //   cursor: pointer;
+  // }
+
+  // input[type="range"]::-webkit-slider-runnable-track {
+  //   background: $sliderColor;
+  //   border-radius: 5px;
+  //   height: 2px;
+  //   cursor: pointer;
+  // }
+
+  @media screen and (min-width: 768px) {
+    width: 93%;
+  }
+
+  @media screen and (min-width: 1120px) {
+    width: 90%;
+  }
+}

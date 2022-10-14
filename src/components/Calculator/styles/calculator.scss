@@ -1,0 +1,184 @@
+@import "../../../common/variables/variables.scss";
+@import url("./../../../fonts/gilroy/style.css");
+@import url("./../../../fonts/next/style.css");
+
+.calculatorPage {
+  @media screen and (min-width: 1120px) {
+    max-width: 1024px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1344px;
+  }
+
+  h1 {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 31px;
+    letter-spacing: -3px;
+    max-width: 420px;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 54px;
+      line-height: 49px;
+      margin-bottom: 44px;
+      max-width: 753px;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  form {
+    .inputs {
+      .inputsWrapper {
+        position: relative;
+        margin-bottom: 25px;
+
+        &.disableInput {
+          opacity: 0.4;
+        }
+
+        @media screen and (min-width: 1120px) {
+          flex: 1 1 320px;
+          margin-bottom: 51px;
+        }
+
+        @media screen and (min-width: 1440px) {
+          flex: 1 1 426px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 44px;
+      }
+
+      @media screen and (min-width: 1120px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        .inputsWrapper:not(:last-child) {
+          margin-right: 32px;
+        }
+      }
+    }
+
+    .results {
+      .amountWrapper {
+        .amount {
+          margin-bottom: 29px;
+          width: 320px;
+
+          @media screen and (min-width: 1440px) {
+            width: 427px;
+          }
+          .name {
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: $resultsTextColor;
+            margin-bottom: 2px;
+
+            @media screen and (min-width: 768px) {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+          }
+
+          .sum {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 20px;
+            color: $resultsTextColor;
+
+            @media screen and (min-width: 768px) {
+              font-size: 54px;
+              line-height: 49px;
+            }
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          display: flex;
+          margin-bottom: 44px;
+
+          .amount:not(:last-child) {
+            margin-right: 85px;
+          }
+        }
+
+        @media screen and (min-width: 1120px) {
+          .amount:not(:last-child) {
+            margin-right: 32px;
+          }
+        }
+      }
+
+      .submitButton {
+        font-family: $titleFont;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 19px;
+        line-height: 20px;
+        color: $buttonTextColor;
+        padding: 18px 50px 22px;
+        border-radius: 40px;
+        background: $sliderColor;
+        border: none;
+        text-align: center;
+        width: 100%;
+
+        &:hover {
+          background: $titleTextColor;
+        }
+
+        @media screen and (min-width: 768px) {
+          width: 345px;
+          font-size: 26px;
+          line-height: 36px;
+        }
+
+        @media screen and (min-width: 1120px) {
+          font-size: 23px;
+          line-height: 36px;
+          width: 320px;
+          align-self: flex-start;
+          padding: 18px 40px;
+        }
+
+        @media screen and (min-width: 1440px) {
+          width: 427px;
+        }
+
+        &:hover {
+          background: $titleTextColor;
+        }
+
+        // &:disabled {
+        //   background: $disabledButtonBackgroundColor;
+        // }
+
+        &.pressed {
+          background: $textColor;
+        }
+
+        &.pressed:hover {
+          background: $titleTextColor;
+        }
+      }
+
+      @media screen and (min-width: 1120px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
